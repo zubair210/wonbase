@@ -2,7 +2,8 @@
 this is my first repository.
 <br>
 Author - zubair (bhao)
-# Q // do value ko dono value alag alag class ka hongi  iss  question ma dono value ko exchange karna hoga aur ya question run nhi kar rha hia isma kuch problem hia 
+# Q  "Two values belonging to different classes need to be exchanged, but the code is not running. What is the problem?"
+
 
 #include<iostream>
 using namespace std;
@@ -59,3 +60,49 @@ int result =  exchange(oo,op);
     cout<<"phela y ki value"<<op.getdata()<<endl;
     return 0;
 }
+# Q . 2 "How to add values returned by functions from two separate classes?"
+ 
+#include<iostream>
+using namespace std;
+class doma;
+class ekma {
+int a ;
+public :
+friend int sum(ekma ,doma );
+void setdata(void ){
+cout<<"no batao "<<endl;
+cin>>a;
+}
+int  getdata(){
+  // ya tarika shi hai value return ka liyab 
+  return a;
+}
+};
+class doma {
+int b;
+public :
+friend int sum(ekma,doma);
+void setdata(){
+cout<<"no batao "<<endl;
+cin>>b;
+}
+int getdata (){
+return b;
+}
+};
+int sum(ekma one ,doma two ){
+return one.getdata()+two.getdata();
+
+}
+int main(){
+  ekma one;
+  doma two;
+one.setdata();
+one.getdata();
+
+two.setdata();
+cout<<"no jodna hai "<<sum(one ,two )<<endl;
+
+  return 0;
+}
+
