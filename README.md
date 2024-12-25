@@ -158,4 +158,28 @@ zukks.process();
 
     return 0;
 }
+# Q . 4  In  this question we use construction and distruction concept 
 
+#include<iostream>
+using namespace std;
+class toughness{
+static int count =0;
+public :
+// void toughness(){}
+ toughness(){
+    count++;
+    cout<<"this is a constructor "<<count<<endl;
+}
+ ~toughness(){
+    cout<<"this is a distructor "<<count<<endl;
+    count--;
+}
+};
+
+int main(){
+cout<<"enter in the constructor "<<endl;
+toughness n1;
+toughness n2,n3;
+cout<<"exit"<<endl;
+    return 0;
+}
