@@ -183,3 +183,136 @@ toughness n2,n3;
 cout<<"exit"<<endl;
     return 0;
 }
+# Q . 5  By this question we understand daimond  problem virtual concept 
+
+#include<iostream>
+using namespace std;
+class dada{
+protected :
+int age ;
+public :
+void set_age(int a ){
+    age = a;
+
+}
+//void get_age(void ){
+//cout<<"dadaji age is "<<age<<endl;
+//}
+};
+class beta : virtual public dada {
+protected:
+int age ;
+public:
+void set2_age(int a ){
+    age = a;
+}
+//void get2_age(void){
+//    cout<<" beta age "<<age<<endl;
+//
+//}
+
+};
+class beti : virtual public dada{
+protected :
+int age ;
+public :
+void set3_data(int a){
+    age = a;
+}
+//void get3_data(void ){
+//    cout<<"beti age "<<age<<endl;
+//}
+};
+class nati : public beta ,public beti {
+protected :
+int age ;
+public :
+void set4_age(int a){
+    age = a;
+  //  get_age();
+  //  get2_age();
+  //  get3_data();
+}
+void display (void ){
+    cout<<"age of virtual dada "<<dada :: age<<endl;
+    cout<<"age of beta "<<beta :: age<<endl;
+    cout<<"age of beti "<<beti :: age<<endl;
+    cout<<"age of nati "<<nati :: age<<endl;
+
+}
+};
+
+int main(){
+    nati yade ;
+    yade.set_age(89);
+    yade.set2_age(32);
+    yade.set3_data(33);
+    yade.set4_age(12);
+    yade.display();
+
+    return 0;
+}
+# Q . 5 In this question we use simplecalculator operation and scintific_calculator operation 
+#include<iostream>
+#include<cmath>
+using namespace std;
+class simplecalculator {
+ protected :
+int suma;
+int sumb;
+public:
+void set_data(int aa,int bb){
+   suma  = aa;
+   sumb = bb;
+}
+void get_data(){
+    cout<<"value of suma is "<<suma<<endl;
+    cout<<"value of sumb is "<<sumb<<endl;
+
+
+
+}
+  };
+class scintific_calculator{
+
+protected :
+float  adda;
+float  addb;
+float addc;
+public:
+void setkaro(float  a,float b,){
+    adda = a;
+    addb = b;
+    addc = sin(( a + b)*180.0/M_PI)// isko dhyan ma rakkho ki 
+    // c++ ma hamesha value radian ma calc hoti hai 
+    // degree ma convert karna ka liya ( 180.0/M_PI )
+    
+}
+void getkaro(){
+    cout<<"your first value "<<adda<<endl;
+    cout<<"your second number "<<addb<<endl;
+    cout<<"your second number "<<addc<<endl;
+
+
+}
+};
+class hybridesolve : public simplecalculator, public scintific_calculator {
+public :
+void show(){
+    cout<<"sum of suma and sumb "<<suma+sumb<<endl;
+    cout<<"add two no refrence from calc "<< addc<<endl;
+}
+
+
+};
+
+
+
+int main(){
+hybridesolve run;
+run.set_data(4,5);
+run.setkaro(30.0,60.0);
+run.show();
+
+    return 0;
+}
