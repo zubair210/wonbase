@@ -316,3 +316,56 @@ run.show();
 
     return 0;
 }
+# Q . 6  In this question we understand how to use construction in multiple inheritence 
+#include<iostream>
+#include<string>
+using namespace std;
+class stationaryshop_old{
+string  book1;
+public :
+stationaryshop_old(string   a){
+    book1 = a;
+cout<<"kitabo ki duniya "<<endl;
+}
+set_book_name(void ){
+    cout<<" book name "<<book1<<endl;
+
+}
+
+
+};
+class stationaryshop_new{
+string  book2;
+public :
+stationaryshop_new(string  a)
+{
+    book2 = a;
+   
+}
+setkaro_book_name(void){
+    cout<<"book name "<<book2<<endl;
+}
+};
+class kya_hai_woh : public stationaryshop_old ,public stationaryshop_new{
+string  book3 , book4;
+public :
+kya_hai_woh( string a, string b , string c,string d ):stationaryshop_new(a),stationaryshop_old(b){
+    book3 = c;
+    book4 = d;
+}
+void dikha_bhi_do(void){
+    cout<<" kitabo ki duniya ma pheli kitab "<<book1<<endl;
+    cout<<" kitabo ki duniya ma dusri  kitab "<<book2<<endl;
+    cout<<" kitabo ki duniya ma tisri kitab "<<book3<<endl;
+    cout<<" kitabo ki duniya ma chauthi  kitab "<<book4<<endl;
+}
+
+
+};
+int main(){
+kya_hai_woh dekhtahu("kite_runner" ,"stationary_shop","fear_not_be_strong",
+"rommeo_and_black_brother");
+dekhtahu.dikha_bhi_do();
+
+    return 0;
+}
