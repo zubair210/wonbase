@@ -369,3 +369,46 @@ dekhtahu.dikha_bhi_do();
 
     return 0;
 }
+# Q . 7 Create a program where two values, a and b, are stored. The addresses of a and b should be stored and the cmath library should be used to find the sine value in degrees. When calling these values, the object should be run through a pointer. The function that is created should also be a constructor function, and everything should be organized using multiple inheritance. The values of a and b should be taken from two different classes.
+#include<iostream>
+#include<cmath>
+using namespace std;
+class boat {
+protected :
+int first;
+int *p = &first;
+public :
+boat (int a )
+{
+
+*p = a;
+cout<<"mera constructor run kare gya "<<endl;
+
+}
+};
+class nauka{
+int second;
+int *q = &second ;
+nauka(int b ){
+*q = b ;
+    cout<<"your second constructor also ready"<<endl;
+}
+double radiansToDegrees(double radians) { 
+    return radians * 180 / M_PI; }
+
+};
+class caption : public boat , public nauka {
+public :
+caption (int a , int b  ):boat(a),nauka(b){
+cout<<"find sin value "<<radiansToDegrees(sin(first +second)  )<<endl;
+cout<<"find cos  value "<<radiansToDegrees(cos(first +second) )<<endl;
+cout<<"find tan value "<<radiansToDegrees(tan(first +second) )<<endl;
+
+} 
+
+};
+int main(){
+
+caption *z = new caption(30,30);
+    return 0;
+}
