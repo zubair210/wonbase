@@ -369,7 +369,7 @@ dekhtahu.dikha_bhi_do();
 
     return 0;
 }
-# Q . 7 Create a program where two values, a and b, are stored. The addresses of a and b should be stored and the cmath library should be used to find the sine value in degrees. When calling these values, the object should be run through a pointer. The function that is created should also be a constructor function, and everything should be organized using multiple inheritance. The values of a and b should be taken from two different classes.
+# Q . 7 Create a program where two values, a and b, are stored. The addresses of a and b should be stored and the cmath library should be used to find the sin, cos and tan value in degrees. When calling these values, the object should be run through a pointer. The function that is created should also be a constructor function, and everything should be organized using multiple inheritance. The values of a and b should be taken from two different classes.
 #include<iostream>
 #include<cmath>
 using namespace std;
