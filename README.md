@@ -406,9 +406,52 @@ cout<<"find tan value "<<radiansToDegrees(tan(first +second) )<<endl;
 
 } 
 
+
 };
 int main(){
 
 caption *z = new caption(30,30);
     return 0;
 }
+
+# Q . 8  how to read and write  words in file  
+
+#include<iostream>
+#include<fstream>
+#include<string>
+using namespace std;
+
+
+int main(){
+  ofstream grass("arcuss.text",ios :: app);
+  grass<<"iska uska kiska  \n";
+  grass<<"moaquito travel in the garden  \n";
+  grass.close();
+
+  ifstream aag;
+  string st,st2;
+  aag.open("arcuss.text");
+  if (!aag.is_open())// file ko directly open karo 
+  {
+    cout<<"file nhi khul rhi hai "<<endl;
+    return 1;// iska matlab agr ya condition nhi apply hue toh next step ma chale jao
+  }
+  
+  aag>>st>>st2;// iska matlab hai jo file ma value hai woh st aur st2 ma store ho jayegi 
+  cout<<"kya likha hai bhwa "<<st<<st2<<endl;
+ //while(aag.eof()==0){
+ // getline(aag st);
+ //   cout<<st<<endl;
+ // }
+  
+     return 0;
+}
+// kya abb bhi mujha koe doubt hai isma 
+/*
+jaisa ki maina dekha ki ofstream ka use hota hai likhna ka liya 
+aur agr overwrite nhi karna chahta toh mujha append mode ka istam karna chahhya 
+open ka parameter ma , ios :: app iska matlab ki ya constant hai aur change nhi kare saktye 
+______ios::app____ .
+if kaam kaam hai read karna ka ek 
+behtarin chz jo ki loop hai jiska madat sa mai sari line ko read kare 
+*/
