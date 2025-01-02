@@ -455,3 +455,54 @@ ______ios::app____ .
 if kaam kaam hai read karna ka ek 
 behtarin chz jo ki loop hai jiska madat sa mai sari line ko read kare 
 */
+# Q. 9 What is the execution process of a vector in C++?
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int main(){
+    vector <int > vectoo1;
+    vector <int > vectoo2;
+    vectoo1.push_back(23);
+    vectoo1.push_back(12);
+    vectoo1.push_back(75);
+    for (int  i = 0; i < vectoo1.size(); i++)
+    {
+    cout<<"the number is live"<<vectoo1[i]<<endl;
+    }
+    if (vectoo1.empty())
+    {
+        cout<<"agr vector khali ho  toh "<<endl;
+    }
+    else{
+        cout<<"agr vector khali na ho toh "<<endl;
+    }
+vectoo2.assign(vectoo1.begin(), vectoo1.end());
+    for (int  i = 0; i < vectoo2.size(); i++)
+    {
+    cout<<"the number is live"<<vectoo2[i]<<endl;
+    }
+vectoo1.reserve(10);
+swap(vectoo2[0] , vectoo2[1]);
+for (int i = 0; i < vectoo2.size(); i++)
+{
+    cout<<"the element value is change during "<<vectoo2[i]<<endl;
+}
+sort(vectoo2.begin(), vectoo2.end());
+for (int i = 0; i < vectoo2.size(); i++)
+{
+    cout<<"the element value is change during "<<vectoo2[i]<<endl;
+}
+reverse(vectoo2.begin(), vectoo2.end());
+for (int i = 0; i < vectoo2.size(); i++)
+{
+    cout<<"the element value is change during "<<vectoo2[i]<<endl;
+}
+vectoo2.erase(vectoo2.begin()+2);
+for (int i = 0; i < vectoo2.size(); i++)
+{
+    cout<<"the element value is change during "<<vectoo2[i]<<endl;
+}
+return 0;
+}
